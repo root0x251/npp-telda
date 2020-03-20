@@ -45,31 +45,39 @@
 <!-- Start your project here-->
 
 <!-- Start your project here-->
-<!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
-
-    <a class="navbar-brand" href="#">
-        <img src="img/logo.png" height="30" alt="russian regions">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" th:href="@{/}">
+        <img th:src="@{/bootstrap/img/logo.png}" height="30" alt="russian regions">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/}">Таблица регионов России</a>
+                <a class="nav-link" th:href="@{/}">Таблица регионов России
+                </a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" th:href="@{/documentation}">Документация</a>
                 <span class="sr-only">(current)</span>
             </li>
+
+            <!-- Links -->
         </ul>
-
     </div>
+    <!-- Collapsible content -->
 </nav>
-
+<!--/.Navbar-->
 
 <div class="container">
 
@@ -239,7 +247,7 @@
                 <a th:href="@{https://github.com/root0x251/npp-telda}" target="_blank">Гитхаб репозиторий</a>
             </h3>
             <h3>
-                <a th:href="@{https://github.com/root0x251/npp-telda/Postman-request}" target="_blank">Postman httpRequest</a>
+                <a th:href="@{https://github.com/root0x251/npp-telda/tree/master/Postman-request}" target="_blank">Postman httpRequest</a>
             </h3>
         </div>
     </div>
