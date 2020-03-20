@@ -13,7 +13,7 @@ import java.util.List;
 @Mapper
 public interface RegionMapper {
     String getAllValues = "select * from region_info order by " +
-                            "region_name DESC, region_short_name ASC";
+                            "region_name ASC";
 
     String findValueByShortName = "select * from region_info where region_info.region_short_name = #{shortName}";
 
