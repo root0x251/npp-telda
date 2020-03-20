@@ -22,7 +22,7 @@ public class RegionController {
         this.regionMapper = regionMapper;
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public String findAll(Model model) {
         Iterable<RegionResource> regionResources = regionMapper.findAll();
         model.addAttribute("regionResources", regionResources);

@@ -22,55 +22,79 @@
 </head>
 <body>
 <!-- Start your project here-->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+<!--<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">-->
+<!--    <a class="navbar-brand" href="#">-->
+<!--        <img th:src="@{/bootstrap/img/logo.png}" height="30" alt="russian regions">-->
+<!--    </a>-->
+
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"-->
+<!--            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">-->
+<!--        <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" href="#">Таблица регионов России-->
+<!--                    <span class="sr-only">(current)</span>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Документация</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--        <ul class="navbar-nav ml-auto nav-flex-icons">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link waves-effect waves-light">-->
+<!--                    <i class="fab fa-twitter"></i>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link waves-effect waves-light">-->
+<!--                    <i class="fab fa-google-plus-g"></i>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+    <!-- Navbar brand -->
     <a class="navbar-brand" href="#">
         <img th:src="@{/bootstrap/img/logo.png}" height="30" alt="russian regions">
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Таблица регионов России
+                <a class="nav-link" th:href="@{/}">Таблица регионов России
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Документация</a>
             </li>
-        </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item">
-                <a class="nav-link waves-effect waves-light">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-effect waves-light">
-                    <i class="fab fa-google-plus-g"></i>
-                </a>
-            </li>
+
+            <!-- Links -->
         </ul>
     </div>
+    <!-- Collapsible content -->
+
 </nav>
+<!--/.Navbar-->
+
+
 <div class="container">
-
-<!--    <h3>Result</h3>-->
-<!--    <table style="width:100%">-->
-<!--        <th:block th:each="region : ${regionResources}">-->
-<!--            <tr>-->
-<!--                <td th:text="${region.id}">...</td>-->
-<!--                <td th:text="${region.regionName}">...</td>-->
-
-<!--                <td th:text="${region.flag}">...</td>-->
-<!--            </tr>-->
-<!--        </th:block>-->
-<!--    </table>-->
-
-
     <table class="table table-hover">
         <thead>
         <tr class="table-name">
@@ -90,7 +114,8 @@
             <td>
                 <div class="row">
                     <div class="col-1">
-                        <img th:src="@{/bootstrap/img/flag-img/default.jpg}" alt="flag" height="20">
+                        <!--                        <img th:src="@{/bootstrap/img/flag-img/default.jpg}" alt="flag" height="20">-->
+                        <img th:src="${region.flag}" alt="flag" height="20">
                     </div>
                     <div class="col region-name">
                         <span th:text="${region.regionName}">...</span>
@@ -110,7 +135,8 @@
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="..bootstrap/js/popper.min.js" th:href="@{/bootstrap/js/popper.min.js}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="..bootstrap/js/bootstrap.min.js" th:href="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="..bootstrap/js/bootstrap.min.js"
+        th:href="@{/bootstrap/js/bootstrap.min.js}"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="..bootstrap/js/mdb.min.js" th:href="@{/bootstrap/js/mdb.min.js}"></script>
 
