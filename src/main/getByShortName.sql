@@ -1,0 +1,1 @@
+select * from region_info where region_info.region_short_name = 'короткое имя'

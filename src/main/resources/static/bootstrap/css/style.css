@@ -1,0 +1,19 @@
+/*header*/
+.default-color {
+    background-color: #1d96ad !important
+}
+
+/* main */
+.container table {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.container table span {
+    padding-left: 5px;
+}
+
+
+.container .table-name {
+    text-align: center;
+}

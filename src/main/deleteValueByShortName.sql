@@ -1,0 +1,1 @@
+delete from region_info where region_short_name = 'sName';
