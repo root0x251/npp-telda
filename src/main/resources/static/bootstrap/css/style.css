@@ -3,6 +3,10 @@
     background-color: #1d96ad !important
 }
 
+.primary-color, ul.stepper li.active a .circle, ul.stepper li.completed a .circle {
+    background-color: #1d96ad !important
+}
+
 /* main */
 .container table {
     margin-top: 50px;
