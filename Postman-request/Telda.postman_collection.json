@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "6d9bc8b6-23c2-445f-bcab-74075cdd8285",
+		"name": "Telda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lists-regions.herokuapp.com/rest-api/all",
+					"protocol": "https",
+					"host": [
+						"lists-regions",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rest-api",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find by short name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lists-regions.herokuapp.com/rest-api/findByShortName?shortName=ARK",
+					"protocol": "https",
+					"host": [
+						"lists-regions",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rest-api",
+						"findByShortName"
+					],
+					"query": [
+						{
+							"key": "shortName",
+							"value": "ARK"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lists-regions.herokuapp.com/rest-api/insertValue?regionName=Республика Башкортостан&regionShortName=BA&flag=https://ruxpert.ru/Файл:Flag_of_Bashkortostan.png",
+					"protocol": "https",
+					"host": [
+						"lists-regions",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rest-api",
+						"insertValue"
+					],
+					"query": [
+						{
+							"key": "regionName",
+							"value": "Республика Башкортостан"
+						},
+						{
+							"key": "regionShortName",
+							"value": "BA"
+						},
+						{
+							"key": "flag",
+							"value": "https://ruxpert.ru/Файл:Flag_of_Bashkortostan.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lists-regions.herokuapp.com/rest-api/updateValue?oShortName=test&nName=Архангельская область&nShortName=ARK&nFlag=https://ruxpert.ru/images/thumb/0/0d/Flag_of_Arkhangelsk_Oblast.png/45px-Flag_of_Arkhangelsk_Oblast.png",
+					"protocol": "https",
+					"host": [
+						"lists-regions",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rest-api",
+						"updateValue"
+					],
+					"query": [
+						{
+							"key": "oShortName",
+							"value": "test"
+						},
+						{
+							"key": "nName",
+							"value": "Архангельская область"
+						},
+						{
+							"key": "nShortName",
+							"value": "ARK"
+						},
+						{
+							"key": "nFlag",
+							"value": "https://ruxpert.ru/images/thumb/0/0d/Flag_of_Arkhangelsk_Oblast.png/45px-Flag_of_Arkhangelsk_Oblast.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://lists-regions.herokuapp.com/rest-api/delete?shortName=test",
+					"protocol": "https",
+					"host": [
+						"lists-regions",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"rest-api",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "shortName",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

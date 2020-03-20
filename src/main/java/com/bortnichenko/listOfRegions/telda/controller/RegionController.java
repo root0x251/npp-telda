@@ -29,4 +29,10 @@ public class RegionController {
         return "index";
     }
 
+    @GetMapping("/documentation")
+    public String documentation(Model model) {
+
+        return "documentation";
+    }
+
 }

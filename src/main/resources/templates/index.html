@@ -33,6 +33,7 @@
         webvisor:true
    });
 
+
     </script>
     <noscript>
         <div><img src="https://mc.yandex.ru/watch/61154302" style="position:absolute; left:-9999px;" alt=""/></div>
@@ -68,7 +69,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Документация</a>
+                <a class="nav-link" th:href="@{/documentation}">Документация</a>
             </li>
 
             <!-- Links -->
@@ -99,7 +100,6 @@
             <td>
                 <div class="row">
                     <div class="col-1">
-                        <!--                        <img th:src="@{/bootstrap/img/flag-img/default.jpg}" alt="flag" height="20">-->
                         <img th:src="${region.flag}" alt="flag" height="20">
                     </div>
                     <div class="col region-name">
@@ -120,7 +120,8 @@
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="../bootstrap/js/popper.min.js" th:href="@{/bootstrap/js/popper.min.js}"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js" th:href="@{/bootstrap/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"
+        th:href="@{/bootstrap/js/bootstrap.min.js}"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="../bootstrap/js/mdb.min.js" th:href="@{/bootstrap/js/mdb.min.js}"></script>
 

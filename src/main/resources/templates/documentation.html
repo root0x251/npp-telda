@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Документация</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../img/mdb-favicon.ico" th:href="@{/bootstrap/img/mdb-favicon.ico}" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{https://use.fontawesome.com/releases/v5.11.2/css/all.css}">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap}">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/mdb.min.css" th:href="@{/bootstrap/css/mdb.min.css}">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="../bootstrap/css/style.css" th:href="@{/bootstrap/css/style.css}">
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61157797, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/61157797" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+
+</head>
+<body>
+<!-- Start your project here-->
+
+<!-- Start your project here-->
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color">
+
+    <a class="navbar-brand" href="#">
+        <img src="img/logo.png" height="30" alt="russian regions">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/}">Таблица регионов России</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/documentation}">Документация</a>
+                <span class="sr-only">(current)</span>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-3">
+            <h2>
+                стек технологий
+            </h2>
+        </div>
+        <div class="col-9 technologies">
+            <h3>
+                Spring Boot
+            </h3>
+            <h3>
+                MyBatis
+            </h3>
+            <h3>
+                PostgreSQL
+            </h3>
+            <h3>
+                Bootstrap + Thymeleaf
+            </h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <h2>
+                получить все записи с БД
+            </h2>
+        </div>
+        <div class="col-9">
+            <h3>
+                https://lists-regions.herokuapp.com/rest-api/all
+            </h3>
+        </div>
+
+        <div class="col-3">
+            <h4>
+                пример ответа
+            </h4>
+        </div>
+
+        <div class="col-9 response-from-server">
+            <h5>
+                {
+                "id": 1,<br>
+                "regionName": "Республика Адыгея",<br>
+                "regionShortName": "AD",<br>
+                "flag": "https://ruxpert.ru/images/thumb/e/e0/Flag_of_Adygea.png/45px-Flag_of_Adygea.png"<br>
+                },
+                <br>
+                {
+                "id": 2,<br>
+                "regionName": "Республика Алтай",<br>
+                "regionShortName": "AL",<br>
+                "flag":
+                "https://ruxpert.ru/images/thumb/9/9a/Flag_of_Altai_Republic.png/45px-Flag_of_Altai_Republic.png"<br>
+                }
+            </h5>
+        </div>
+
+    </div>
+
+    <div class="row ">
+        <div class="col-3">
+            <h2>
+                поиск по коду iso
+            </h2>
+        </div>
+        <div class="col-9">
+            <h3>
+                https://lists-regions.herokuapp.com/rest-api/findByShortName?shortName=ARK
+            </h3>
+        </div>
+
+        <div class="col-3">
+            <h4>
+                пример ответа
+            </h4>
+        </div>
+
+        <div class="col-9 response-from-server">
+            <h5>
+                [ { "id": 6,<br>
+                "regionName": "Архангельская область",<br>
+                "regionShortName": "ARK",<br>
+                "flag":
+                "https://ruxpert.ru/images/thumb/0/0d/Flag_of_Arkhangelsk_Oblast.png/45px-Flag_of_Arkhangelsk_Oblast.png"<br>
+                }
+                ]
+            </h5>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-3">
+            <h2>
+                добавление записи
+            </h2>
+        </div>
+        <div class="col-9">
+            <h3>
+                https://lists-regions.herokuapp.com/rest-api/insertValue?regionName=Республика%20Башкортостан&regionShortName=BA&flag=https://ruxpert.ru/Файл:Flag_of_Bashkortostan.png
+            </h3>
+
+            <h6>Примечание</h6>
+            <span>
+                    В случае добавления записи через строку браузера, в качестве пробела требуется использовать символ: <symbol>%20</symbol>
+                </span>
+
+        </div>
+
+        <div class="col-3">
+            <h4>
+                пример ответа
+            </h4>
+        </div>
+
+        <div class="col-9 response-from-server">
+            <h5>
+                the Республика Башкортостан was added
+            </h5>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-3">
+            <h2>
+                 удаление записи
+            </h2>
+        </div>
+        <div class="col-9">
+            <h3>
+                https://lists-regions.herokuapp.com/rest-api/delete?shortName=test
+            </h3>
+
+            <h6>Примечание</h6>
+            <span>
+                    Удаляется элемент по короткому имени региона, пример "IN"
+                </span>
+
+        </div>
+
+        <div class="col-3">
+            <h4>
+                пример ответа
+            </h4>
+        </div>
+
+        <div class="col-9 response-from-server">
+            <h5>
+                the test was deleted
+            </h5>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3">
+            <h2>
+                 ссылки на ресурсы
+            </h2>
+        </div>
+        <div class="col-9">
+            <h3>
+                <a th:href="@{https://github.com/root0x251/npp-telda}" target="_blank">Гитхаб репозиторий</a>
+            </h3>
+            <h3>
+                <a th:href="@{https://github.com/root0x251/npp-telda/Postman-request}" target="_blank">Postman httpRequest</a>
+            </h3>
+        </div>
+    </div>
+
+</div>
+<!-- End your project here-->
+
+<!-- jQuery -->
+<script type="text/javascript" src="../bootstrap/js/jquery.min.js" th:href="@{/bootstrap/js/jquery.min.js}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../bootstrap/js/popper.min.js" th:href="@{/bootstrap/js/popper.min.js}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"
+        th:href="@{/bootstrap/js/bootstrap.min.js}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../bootstrap/js/mdb.min.js" th:href="@{/bootstrap/js/mdb.min.js}"></script>
+
+</body>
+</html>
